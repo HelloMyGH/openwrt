@@ -244,10 +244,10 @@ generate_static_system() {
 		set system.ntp='timeserver'
 		set system.ntp.enabled='1'
 		set system.ntp.enable_server='0'
-		add_list system.ntp.server='0.openwrt.pool.ntp.org'
-		add_list system.ntp.server='1.openwrt.pool.ntp.org'
-		add_list system.ntp.server='2.openwrt.pool.ntp.org'
-		add_list system.ntp.server='3.openwrt.pool.ntp.org'
+		add_list system.ntp.server='ntp1.aliyun.com'
+		add_list system.ntp.server='time1.cloud.tencent.com'
+		add_list system.ntp.server='time.ustc.edu.cn'
+		add_list system.ntp.server='pool.ntp.org'
 	EOF
 
 	if json_is_a system object; then
@@ -366,11 +366,12 @@ generate_led() {
 		;;
 
 		switch)
-			local port_mask speed_mask
-			json_get_vars port_mask speed_mask
+			local port_mask speed_mask mode
+			json_get_vars port_mask speed_mask mode
 			uci -q batch <<-EOF
 				set system.$cfg.port_mask='$port_mask'
 				set system.$cfg.speed_mask='$speed_mask'
+				set system.$cfg.mode='$mode'
 			EOF
 		;;
 

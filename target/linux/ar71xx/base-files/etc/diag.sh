@@ -91,6 +91,7 @@ get_status_led() {
 	tl-mr13u|\
 	tl-wdr4300|\
 	tl-wdr4900-v2|\
+	tl-wdr8500-v1|\
 	tl-wr703n|\
 	tl-wr710n|\
 	tl-wr720n-v3|\
@@ -210,6 +211,7 @@ get_status_led() {
 		status_led="$board:red:system"
 		;;
 	dw33d|\
+	sbr-ac1750|\
 	r36a)
 		status_led="$board:blue:status"
 		;;
@@ -283,6 +285,9 @@ get_status_led() {
 		status_led="ubnt:green:d22"
 		;;
 	mc-mac1200r)
+		status_led="mercury:green:system"
+		;;
+	mc-mw4530r)
 		status_led="mercury:green:system"
 		;;
 	mr18|\
@@ -415,6 +420,9 @@ get_status_led() {
 	smart-300)
 		status_led="nc-link:green:system"
 		;;
+	sgr-w500-n85b-v2)
+		status_led="grentech:green:status"
+		;;
 	qihoo-c301)
 		status_led="qihoo:green:status"
 		;;
@@ -463,6 +471,7 @@ get_status_led() {
 	tl-wa901nd-v3|\
 	tl-wa901nd-v4|\
 	tl-wa901nd-v5|\
+	tl-wdr3227-v2|\
 	tl-wdr3320-v2|\
 	tl-wdr3500|\
 	tl-wr1041n-v2|\
@@ -485,6 +494,7 @@ get_status_led() {
 	tl-wr842n-v3|\
 	tl-wr880n-v1|\
 	tl-wr881n-v1|\
+	tl-wr885n-v1|\
 	tl-wr941nd|\
 	tl-wr941n-v7|\
 	tl-wr941nd-v5)
@@ -496,7 +506,8 @@ get_status_led() {
 	tl-wr940n-v6)
 		status_led="tp-link:orange:diag"
 		;;
-	tl-wdr6500-v2)
+	tl-wdr6500-v2|\
+	tl-wdr6500-v6)
 		status_led="tp-link:white:system"
 		;;
 	tube2h)
@@ -578,6 +589,9 @@ set_state() {
 		status_led_blink_failsafe
 		;;
 	preinit_regular)
+		status_led_blink_preinit_regular
+		;;
+	upgrade)
 		status_led_blink_preinit_regular
 		;;
 	done)

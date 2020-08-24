@@ -270,6 +270,9 @@ tplink_board_detect() {
 	"094000"*)
 		model="TP-Link TL-WR940N"
 		;;
+	"088500"*)
+		model="TP-Link TL-WR885N"
+		;;
 	"094100"*)
 		model="TP-Link TL-WR941N/ND"
 
@@ -299,6 +302,9 @@ tplink_board_detect() {
 	"322000"*)
 		model="TP-Link TL-MR3220"
 		;;
+	"322700"*)
+		model="TP-Link TL-WDR3227"
+		;;
 	"332000"*)
 		model="TP-Link TL-WDR3320"
 		;;
@@ -325,7 +331,7 @@ tplink_board_detect() {
 		model="ANTROUTER-R1"
 		;;
 	"453000"*)
-		model="Mercury MW4530R"
+		model="MerCury MW4530R"
 		;;
 	"49000002")
 		model="TP-Link TL-WDR4900"
@@ -345,6 +351,9 @@ tplink_board_detect() {
 		;;
 	"751000"*)
 		model="TP-Link TL-WA7510N"
+		;;
+	"85000001")
+		model="TP-Link TL-WDR8500"
 		;;
 	"934100"*)
 		model="NC-LINK SMART-300"
@@ -460,7 +469,7 @@ ar71xx_board_detect() {
 	*"AP143 reference board")
 		name="ap143"
 		;;
-	*"AP147-010 reference board")
+	*"Letv SuperRouter")
 		name="ap147-010"
 		;;
 	*"AP152 reference board")
@@ -679,6 +688,9 @@ ar71xx_board_detect() {
 	*"DW33D")
 		name="dw33d"
 		;;
+	*"SBR-AC1750")
+		name="sbr-ac1750"
+		;;
 	*"E1700AC v2")
 		name="e1700ac-v2"
 		;;
@@ -781,6 +793,9 @@ ar71xx_board_detect() {
 	*"GL-USB150")
 		name="gl-usb150"
 		;;
+	"GRENTECH SGR-W500-N85b v2.0")
+		name="sgr-w500-n85b-v2"
+		;;
 	*"HiveAP-121")
 		name="hiveap-121"
 		;;
@@ -830,6 +845,9 @@ ar71xx_board_detect() {
 		;;
 	*"MAC1200R")
 		name="mc-mac1200r"
+		;;
+	*"MW4530R")
+		name="mc-mw4530r"
 		;;
 	*"MiniBox V1.0")
 		name="minibox-v1"
@@ -1265,6 +1283,9 @@ ar71xx_board_detect() {
 	*"TL-WA901ND v5")
 		name="tl-wa901nd-v5"
 		;;
+	*"TL-WDR3227 v2")
+		name="tl-wdr3227-v2"
+		;;
 	*"TL-WDR3320 v2")
 		name="tl-wdr3320-v2"
 		;;
@@ -1279,6 +1300,12 @@ ar71xx_board_detect() {
 		;;
 	*"TL-WDR6500 v2")
 		name="tl-wdr6500-v2"
+		;;
+	*"TL-WDR6500 v6")
+		name="tl-wdr6500-v6"
+		;;
+	*"TL-WDR8500 v1")
+		name="tl-wdr8500-v1"
 		;;
 	*"TL-WPA8630")
 		name="tl-wpa8630"
@@ -1369,6 +1396,9 @@ ar71xx_board_detect() {
 		;;
 	*"TL-WR881N v1")
 		name="tl-wr881n-v1"
+		;;
+	*"TL-WR885N v1")
+		name="tl-wr885n-v1"
 		;;
 	*"TL-WR902AC v1")
 		name="tl-wr902ac-v1"
